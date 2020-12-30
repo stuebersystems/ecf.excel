@@ -1,0 +1,81 @@
+{
+  "Excel": {
+    "EcfExport": {
+      "SourceProvicer": "Csv",
+      "SourceFileName": "",
+      "FolderName": "",
+      "Files": [
+        {
+          "Name": "Subjects"
+        },
+        {
+          "Name": "Students"
+        },
+        {
+          "Name": "SchoolClasses"
+        },
+        {
+          "Name": "StudentSubjects"
+        },
+        {
+          "Name": "StudentSchoolClassAttendances"
+        }
+      ],
+      "XlsSheetName": "Test",
+      "XlsFirstRowNumber": 3,
+      "XlsLastRowNumber": 20,
+      "XlsMappings": [
+        {
+          "FromHeader": "A",
+          "ToHeader": "Id"
+        },
+        {
+          "FromHeader": "C",
+          "ToHeader": "Vorname"
+        },
+        {
+          "FromHeader": "D",
+          "ToHeader": "Nachname"
+        },
+        {
+          "FromHeader": "E",
+          "ToHeader": "Klasse"
+        },
+        {
+          "FromHeader": "G",
+          "ToHeader": "Fach1"
+        },
+        {
+          "FromHeader": "H",
+          "ToHeader": "Fach2"
+        }
+      ],
+      "CsvMappings": [
+        {
+          "FromHeader": "NR",
+          "ToHeader": "Id"
+        },
+        {
+          "FromHeader": "VNAME",
+          "ToHeader": "Vorname"
+        },
+        {
+          "FromHeader": "NAME",
+          "ToHeader": "Nachname"
+        },
+        {
+          "FromHeader": "KLASSE",
+          "ToHeader": "Klasse"
+        },
+        {
+          "FromHeader": "F1",
+          "ToHeader": "Fach1"
+        },
+        {
+          "FromHeader": "F2",
+          "ToHeader": "Fach2"
+        }
+      ]
+    }
+  }
+}

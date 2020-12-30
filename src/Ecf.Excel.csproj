@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Copyright>© 2020 STÜBER SYSTEMS GmbH</Copyright>
+    <Product>ECF Tool for Excel</Product>
+    <Company>STÜBER SYSTEMS GmbH</Company>
+    <Version>0.0.1</Version>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>Tool for generating ECF files from a simple Excel sheet or CSV</Description>
+    <Authors>STÜBER SYSTEMS GmbH</Authors>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="Enbrea.Csv" Version="0.1.0" />
+    <PackageReference Include="Enbrea.Ecf" Version="0.1.1" />
+    <PackageReference Include="Enbrea.GuidFactory" Version="0.1.1" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.20574.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Templates\Template.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
