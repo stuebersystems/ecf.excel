@@ -1,8 +1,8 @@
-﻿#region ENBREA - Copyright (C) 2020 STÜBER SYSTEMS GmbH
+﻿#region ENBREA - Copyright (C) 2021 STÜBER SYSTEMS GmbH
 /*    
  *    ENBREA
  *    
- *    Copyright (C) 2020 STÜBER SYSTEMS GmbH
+ *    Copyright (C) 2021 STÜBER SYSTEMS GmbH
  *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU Affero General Public License, version 3,
@@ -22,7 +22,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -65,27 +64,6 @@ namespace Ecf.Excel
             });
         }
 
-        public static async Task InitExport(FileInfo configFile)
-        {
-            await Execute(async (cancellationToken, cancellationEvent) =>
-            {
-                try
-                {
-                    await ConfigurationManager.InitConfig(
-                        configFile.FullName,
-                        GetTemplateFileName(),
-                        cancellationToken);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine($"[Error] Template creation failed");
-                    Console.WriteLine($"[Error] {ex.Message}");
-                    Environment.ExitCode = 1;
-                }
-            });
-        }
-
         private static async Task Execute(Func<CancellationToken, EventWaitHandle, Task> action)
         {
             using (var cancellationTokenSource = new CancellationTokenSource())
@@ -119,17 +97,9 @@ namespace Ecf.Excel
 
                     Console.WriteLine();
                     Console.WriteLine($"Time elapsed: {stopwatch.Elapsed}.");
+                    Console.WriteLine();
                 }
             }
         }
-
-        private static string GetTemplateFileName()
-        {
-            // Get own assembly info
-            Assembly assembly = Assembly.GetExecutingAssembly();
-
-            // Get filename for json template
-            return Path.Combine(Path.GetDirectoryName(assembly.Location), "Templates", "Template.json");
-        }
-    }
+   }
 }

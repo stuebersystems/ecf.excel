@@ -1,8 +1,8 @@
-#region ENBREA - Copyright (C) 2020 STÜBER SYSTEMS GmbH
+#region ENBREA - Copyright (C) 2021 STÜBER SYSTEMS GmbH
 /*    
  *    ENBREA
  *    
- *    Copyright (C) 2020 STÜBER SYSTEMS GmbH
+ *    Copyright (C) 2021 STÜBER SYSTEMS GmbH
  *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU Affero General Public License, version 3,
@@ -44,13 +44,13 @@ namespace Ecf.Excel.Xunit
 
             var csvConfig = await ConfigurationManager.LoadFromFile(cfgFile);
 
-            csvConfig.EcfExport.FolderName = ecfFolder.FullName;
+            csvConfig.EcfExport.TargetFolderName = ecfFolder.FullName;
             csvConfig.EcfExport.SourceProvider = EcfSourceProvider.Xlsx;
             csvConfig.EcfExport.SourceFileName = xlsFile;
 
             var exportManager = new XlsExportManager(csvConfig);
 
-            await exportManager.Execute(ThrowExecptions: true);
+            await exportManager.Execute();
         }
 
         [Fact]
@@ -67,13 +67,13 @@ namespace Ecf.Excel.Xunit
 
             var csvConfig = await ConfigurationManager.LoadFromFile(cfgFile);
 
-            csvConfig.EcfExport.FolderName = ecfFolder.FullName;
+            csvConfig.EcfExport.TargetFolderName = ecfFolder.FullName;
             csvConfig.EcfExport.SourceProvider = EcfSourceProvider.Csv;
             csvConfig.EcfExport.SourceFileName = csvFile;
 
             var exportManager = new CsvExportManager(csvConfig);
 
-            await exportManager.Execute(ThrowExecptions: true);
+            await exportManager.Execute();
         }
 
         private string GetOutputFolder()
