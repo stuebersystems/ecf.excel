@@ -1,7 +1,7 @@
 {
   "Excel": {
     "EcfExport": {
-      "SourceProvicer": "Csv",
+      "SourceProvicer": "",
       "SourceFileName": "",
       "FolderName": "",
       "Files": [

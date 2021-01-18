@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Copyright>© 2020 STÜBER SYSTEMS GmbH</Copyright>
+    <Copyright>© 2021 STÜBER SYSTEMS GmbH</Copyright>
     <Product>ECF Tool for Excel</Product>
     <Company>STÜBER SYSTEMS GmbH</Company>
     <Version>0.0.1</Version>
@@ -21,9 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Templates\Template.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

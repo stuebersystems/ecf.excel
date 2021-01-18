@@ -1,8 +1,8 @@
-﻿#region ENBREA - Copyright (C) 2020 STÜBER SYSTEMS GmbH
+﻿#region ENBREA - Copyright (C) 2021 STÜBER SYSTEMS GmbH
 /*    
  *    ENBREA
  *    
- *    Copyright (C) 2020 STÜBER SYSTEMS GmbH
+ *    Copyright (C) 2021 STÜBER SYSTEMS GmbH
  *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU Affero General Public License, version 3,
@@ -26,12 +26,12 @@ namespace Ecf.Excel
 {
     public class EcfExportOptions : EcfOptions
     {
-        [JsonConverter(typeof(JsonStringEnumConverter))] 
-        public EcfSourceProvider SourceProvider { get; set; } = EcfSourceProvider.Csv;
-        public string SourceFileName { get; set; }
         public ICollection<CsvMapping> CsvMappings { get; set; } = new List<CsvMapping>();
         public ICollection<EcfExportFile> Files { get; set; } = new List<EcfExportFile>();
-        public string FolderName { get; set; }
+        public string SourceFileName { get; set; }
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public EcfSourceProvider SourceProvider { get; set; } = EcfSourceProvider.Csv;
+        public string TargetFolderName { get; set; }
         public int? XlsFirstRowNumber { get; set; }
         public int? XlsLastRowNumber { get; set; }
         public ICollection<XlsMapping> XlsMappings { get; set; } = new List<XlsMapping>();
