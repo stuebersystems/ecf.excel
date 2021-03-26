@@ -28,7 +28,7 @@ namespace Ecf.Excel
 {
     public class ExportStudent
     {
-        public readonly DateTime? BirthDate = null;
+        public readonly Date? BirthDate = null;
         public readonly string FirstName = null;
         public readonly EcfGender? Gender = null;
         public readonly string Id;
