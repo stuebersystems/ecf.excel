@@ -42,6 +42,10 @@
           "ToHeader": "Klasse"
         },
         {
+          "FromHeader": "F",
+          "ToHeader": "Geburtstag"
+        },
+        {
           "FromHeader": "G",
           "ToHeader": "Fach1"
         },
@@ -66,6 +70,10 @@
         {
           "FromHeader": "KLASSE",
           "ToHeader": "Klasse"
+        },
+        {
+          "FromHeader": "GEB",
+          "ToHeader": "Geburtstag"
         },
         {
           "FromHeader": "F1",
