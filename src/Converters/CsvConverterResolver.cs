@@ -32,37 +32,25 @@ namespace Ecf.Excel
     {
         protected override void RegisterDefaultConverters()
         {
-            AddConverter<bool?>(new CsvBooleanConverter());
-            AddConverter<bool>(new CsvBooleanConverter());
-            AddConverter<byte?>(new CsvByteConverter());
-            AddConverter<byte>(new CsvByteConverter());
-            AddConverter<char?>(new CsvCharConverter());
-            AddConverter<char>(new CsvCharConverter());
-            AddConverter<Date?>(new CsvDateConverter());
-            AddConverter<Date>(new CsvDateConverter());
-            AddConverter<decimal?>(new CsvDecimalConverter());
-            AddConverter<decimal>(new CsvDecimalConverter());
-            AddConverter<double?>(new CsvDoubleConverter());
-            AddConverter<double>(new CsvDoubleConverter());
-            AddConverter<EcfGender?>(new CsvGenderConverter());
-            AddConverter<EcfGender>(new CsvGenderConverter());
-            AddConverter<Guid?>(new CsvGuidConverter());
-            AddConverter<Guid>(new CsvGuidConverter());
-            AddConverter<int?>(new CsvInt32Converter());
-            AddConverter<int>(new CsvInt32Converter());
-            AddConverter<long?>(new CsvInt64Converter());
-            AddConverter<long>(new CsvInt64Converter());
-            AddConverter<sbyte?>(new CsvSByteConverter());
-            AddConverter<sbyte>(new CsvSByteConverter());
-            AddConverter<short?>(new CsvInt16Converter());
-            AddConverter<short>(new CsvInt16Converter());
-            AddConverter<string>(new CsvStringConverter());
-            AddConverter<uint?>(new CsvUInt32Converter());
-            AddConverter<uint>(new CsvUInt32Converter());
-            AddConverter<ulong?>(new CsvUInt64Converter());
-            AddConverter<ulong>(new CsvUInt64Converter());
-            AddConverter<ushort?>(new CsvUInt16Converter());
-            AddConverter<ushort>(new CsvUInt16Converter());
+            AddConverter(typeof(bool), new CsvBooleanConverter());
+            AddConverter(typeof(byte), new CsvByteConverter());
+            AddConverter(typeof(char), new CsvCharConverter());
+            AddConverter(typeof(Date), new CsvDateConverter());
+            AddConverter(typeof(decimal), new CsvDecimalConverter());
+            AddConverter(typeof(double), new CsvDoubleConverter());
+            AddConverter(typeof(Guid), new CsvGuidConverter());
+            AddConverter(typeof(int), new CsvInt32Converter());
+            AddConverter(typeof(long), new CsvInt64Converter());
+            AddConverter(typeof(sbyte), new CsvSByteConverter());
+            AddConverter(typeof(short), new CsvInt16Converter());
+            AddConverter(typeof(string), new CsvStringConverter());
+            AddConverter(typeof(uint), new CsvUInt32Converter());
+            AddConverter(typeof(uint), new CsvUInt32Converter());
+            AddConverter(typeof(ulong), new CsvUInt64Converter());
+            AddConverter(typeof(ulong), new CsvUInt64Converter());
+            AddConverter(typeof(Uri), new CsvUriConverter());
+            AddConverter(typeof(ushort), new CsvUInt16Converter());
+            AddConverter(typeof(EcfGender), new CsvGenderConverter());
         }
     }
 }

@@ -113,7 +113,7 @@ namespace Ecf.Excel
 
            var keyValues = csvLineBuilder.Write(FirstName, MiddleName, LastName, BirthDate?.ToString("yyyy-MM-dd"));
 
-           return GuidFactory.Create(GuidFactory.DnsNamespace, keyValues).ToString();
+           return GuidGenerator.Create(GuidGenerator.DnsNamespace, keyValues).ToString();
         }
     }
 }

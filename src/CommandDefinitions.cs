@@ -31,9 +31,8 @@ namespace Ecf.Excel
         {
             var command = new Command("export", "Exports data from CSV or XLSX to ECF files")
             {
-                new Option(new[] { "--config", "-c" }, "Path to existing JSON configuration file")
+                new Option<FileInfo>(new[] { "--config", "-c" }, "Path to existing JSON configuration file")
                 {
-                    Argument = new Argument<FileInfo>(),
                     IsRequired = true
                 },
             };
